@@ -16,7 +16,8 @@ deadline.setSeconds(deadline.getSeconds() + 10);
 
 const client = new grpcObj.customer.Customer(
   `localhost:${PORT}`,
-  grpc.credentials.createInsecure()
+  grpc.credentials.createInsecure(),
+  { "grpc.keepalive_timeout_ms": 5000 }
 );
 
 client.waitForReady(deadline, (err) => {
