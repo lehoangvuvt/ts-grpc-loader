@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "proto:gen": "./node_modules/.bin/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=proto/ proto/customer.proto",
+    "gen:certs": "bash ./scripts/gen_certs.sh",
+    "proto:gen": "./node_modules/.bin/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=proto/ proto/greet.proto",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node client"
   },
